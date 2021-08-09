@@ -1,0 +1,318 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="English" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="English" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>GCS GUI documentation &mdash; gcs_gui_documentation 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Prepping LiDAR data from processing" href="Pages/tab1.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="#" class="icon icon-home"> gcs_gui_documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Processing steps</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Pages/tab1.html">Prepping LiDAR data from processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Pages/tab2.html">Generating a ground-surface DEM from LiDAR data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Pages/tab3.html">Generating a thalweg centerline + elevation profile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Pages/tab4.html">Thalweg based DEM detrending</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Pages/tab5.html">Selecting key flow stage heights + refining center-lines</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Pages/literature.html">Literature</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Pages/glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Pages/acknowledgements.html">Acknowledgements</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">gcs_gui_documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#">Docs</a> &raquo;</li>
+        
+      <li>GCS GUI documentation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="gcs-gui-documentation">
+<h1>GCS GUI documentation<a class="headerlink" href="#gcs-gui-documentation" title="Permalink to this headline">¶</a></h1>
+<p>This webpage includes the documentation for the Geomorphic Covariance Structure (GCS) analysis GUI,
+<a class="reference external" href="https://github.com/xaviernogueira/gcs_gui">https://github.com/xaviernogueira/gcs_gui</a></p>
+<div class="section" id="included-files">
+<h2>Included files<a class="headerlink" href="#included-files" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Graphic user interface executable script, <em>gcs_gui.py</em></p></li>
+<li><p>Python files defining GUI implemented function/methods</p></li>
+<li><p>Copy of RapidLasso's LAStools software, <a class="reference external" href="http://lastools.org/">http://lastools.org/</a></p></li>
+<li><p>Copy of 'Breeze' GUI theme, <a class="reference external" href="https://github.com/MaxPerl/ttk-Breeze">https://github.com/MaxPerl/ttk-Breeze</a></p></li>
+</ul>
+</div>
+<div class="section" id="pre-requisite-packages">
+<h2>Pre-requisite packages<a class="headerlink" href="#pre-requisite-packages" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">arcpy</span></code></p>
+<ul>
+<li><p>(w/ Spatial Analyst licence) Comes with ArcGIS Python 3 default environment. Clone environment to enable external package installation.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pillow</span></code></p>
+<ul>
+<li><p><a class="reference external" href="https://python-pillow.org/">https://python-pillow.org/</a></p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">plotly</span></code></p>
+<ul>
+<li><p><a class="reference external" href="https://plotly.com/">https://plotly.com/</a></p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">seaborn</span></code></p>
+<ul>
+<li><p><a class="reference external" href="https://seaborn.pydata.org/">https://seaborn.pydata.org/</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="id1">
+<h2>Setting up<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>Create a folder containing following:</p>
+<ul class="simple">
+<li><p>LAS/LAZ point cloud data files with spatial extents/footprint that capture a river valley's in-channel topography. Either bathymetric LiDAR or traditional LiDAR collected during dry channel conditions.</p></li>
+<li><p>Any shapefile (.shp) from the LiDAR project's metadata that has a spatial reference frame matching the point cloud data. Can also be manually created based on project metadata files.</p></li>
+<li><p>A shapefile (.shp) defining the analysis area of interest (AOI). Projected in a spatial reference frame with desired analysis units (Meters or US Feet)This shapefile's spatial reference is applied to all output files.</p></li>
+<li><p>A folder (within the top level directory) containing only 4-band, 1m- resolution NAIP imagery .jp2 files that cover the AOI.</p></li>
+</ul>
+</div>
+<div class="section" id="bugs-and-errors">
+<h2>Bugs and errors<a class="headerlink" href="#bugs-and-errors" title="Permalink to this headline">¶</a></h2>
+<p>Do not hesistate to contact <a class="reference external" href="mailto:xavier&#46;rojas&#46;nogueira&#37;&#52;&#48;gmail&#46;com">xavier<span>&#46;</span>rojas<span>&#46;</span>nogueira<span>&#64;</span>gmail<span>&#46;</span>com</a> with bug reports, errors, or other feedback.
+We will try to respond expeditiously, and update the software when necessary.</p>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Processing steps</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Pages/tab1.html">Prepping LiDAR data from processing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Pages/tab1.html#inputs">Inputs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Pages/tab1.html#relevant-outputs">Relevant outputs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Pages/tab1.html#applied-method-flow-chart">Applied method flow chart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Pages/tab1.html#example-of-a-correctly-set-up-input-directory">Example of a correctly set up input directory</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Pages/tab2.html">Generating a ground-surface DEM from LiDAR data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Pages/tab2.html#inputs">Inputs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Pages/tab2.html#relevant-outputs">Relevant Outputs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Pages/tab2.html#applied-method-flow-chart">Applied method flow chart</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Pages/tab3.html">Generating a thalweg centerline + elevation profile</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Pages/tab3.html#inputs">Inputs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Pages/tab3.html#relevant-outputs">Relevant outputs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Pages/tab3.html#applied-method-flow-chart">Applied method flow chart</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Pages/tab4.html">Thalweg based DEM detrending</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Pages/tab4.html#inputs">Inputs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Pages/tab4.html#slope-breakpoint-selection-example">Slope breakpoint selection example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Pages/tab4.html#relevant-outputs">Relevant Outputs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Pages/tab4.html#applied-method-flow-chart">Applied method flow chart</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Pages/tab5.html">Selecting key flow stage heights + refining center-lines</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Pages/tab5.html#inputs">Inputs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Pages/tab5.html#outputs">Outputs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Pages/tab5.html#key-flow-stage-selection-example">Key flow stage selection example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Pages/tab5.html#generating-key-flow-stage-centerlines">Generating key flow stage centerlines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Pages/tab5.html#draft-centerline-editing-example">Draft centerline editing example</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Pages/literature.html">Literature</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Pages/glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Pages/acknowledgements.html">Acknowledgements</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h2>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Pages/tab1.html" class="btn btn-neutral float-right" title="Prepping LiDAR data from processing" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2021, Xavier Nogueira
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

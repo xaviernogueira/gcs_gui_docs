@@ -1,0 +1,267 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="English" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="English" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Prepping LiDAR data from processing &mdash; gcs_gui_documentation 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Generating a ground-surface DEM from LiDAR data" href="tab2.html" />
+    <link rel="prev" title="GCS GUI documentation" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> gcs_gui_documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Processing steps</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Prepping LiDAR data from processing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#inputs">Inputs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#relevant-outputs">Relevant outputs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#applied-method-flow-chart">Applied method flow chart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#example-of-a-correctly-set-up-input-directory">Example of a correctly set up input directory</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tab2.html">Generating a ground-surface DEM from LiDAR data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tab3.html">Generating a thalweg centerline + elevation profile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tab4.html">Thalweg based DEM detrending</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tab5.html">Selecting key flow stage heights + refining center-lines</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="literature.html">Literature</a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="acknowledgements.html">Acknowledgements</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">gcs_gui_documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Prepping LiDAR data from processing</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/Pages/tab1.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="prepping-lidar-data-from-processing">
+<h1>Prepping LiDAR data from processing<a class="headerlink" href="#prepping-lidar-data-from-processing" title="Permalink to this headline">¶</a></h1>
+<p>LiDAR data point files are prepared for LAStools vegetation point removal. NAIP imagery is used to generate a NDVI raster and create a polygon representing non-vegetated bare-ground.</p>
+<div class="section" id="inputs">
+<h2>Inputs<a class="headerlink" href="#inputs" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p>The directory containing river valley LiDAR point cloud files (<span class="xref std std-ref">Setting up</span>)</p></li>
+<li><p>The directory containing NAIP imagery (<span class="xref std std-ref">Setting up</span>)</p></li>
+<li><p>A shapefile with the LiDAR project's spatial reference frame (see 'Setting up')</p></li>
+<li><p>A shapefile defining the area of interest in the desired output spatial reference frame (<span class="xref std std-ref">Setting up</span>)</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>This shapefile should be manually edited to somewhat tightly surround the river channel and flood-plain.</p></li>
+<li><p>Do not exclude any areas that could be submerged under flood stage flows, but excess AOI coverage will substantially slow the LiDAR processing step.</p></li>
+<li><p>Define the shapefile's spatial reference frame (including vertical). This will be the reference frame of all output files, and defines the units used within the analysis.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>NDVI threshold (default is 0.4)</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>NDVI = Normalized Difference Vegetation Index, <a class="reference external" href="https://en.wikipedia.org/wiki/Normalized_difference_vegetation_index">https://en.wikipedia.org/wiki/Normalized_difference_vegetation_index</a></p></li>
+<li><p>The threshold corresponds to the minimum NDVI value that gets defined as vegetation.</p></li>
+<li><p>In arid regions, lower values may be required (0.15-0.3).</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Inspect the 'veg_poly.shp' file within the output folder. Verify vegetation mask quality. Adjust NDVI value and run again if necessary.</p>
+</div>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="relevant-outputs">
+<h2>Relevant outputs<a class="headerlink" href="#relevant-outputs" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>A shapefile representing bare-ground, <em>ground_poly.shp</em></p></li>
+<li><p>A shapefile representing the LiDAR data extent, <em>las_footprint.shp</em></p></li>
+</ul>
+</div>
+<div class="section" id="applied-method-flow-chart">
+<h2>Applied method flow chart<a class="headerlink" href="#applied-method-flow-chart" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="Pages/images/tab1_flow_chart.png"><img alt="Pages/images/tab1_flow_chart.png" src="Pages/images/tab1_flow_chart.png" style="width: 500px;" /></a>
+</div>
+<div class="section" id="example-of-a-correctly-set-up-input-directory">
+<h2>Example of a correctly set up input directory<a class="headerlink" href="#example-of-a-correctly-set-up-input-directory" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="Pages/images/set_up_folder.png"><img alt="Pages/images/set_up_folder.png" src="Pages/images/set_up_folder.png" style="width: 500px;" /></a>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="tab2.html" class="btn btn-neutral float-right" title="Generating a ground-surface DEM from LiDAR data" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../index.html" class="btn btn-neutral float-left" title="GCS GUI documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2021, Xavier Nogueira
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
