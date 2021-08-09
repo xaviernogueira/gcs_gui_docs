@@ -112,7 +112,7 @@ Below is an example of a draft centerline issue.
 
 To repair such an issue, the line segment on the right of the gap was trimmed, and a new line segment was drawn to connect the lines end to end. 
 
-.. image:: images/draft_edits1.png
+.. image:: images/draft_edit1.png
    :width: 500
 
 Below we have an example of non-aligned centerline ends, as well as another centerline gap.
@@ -122,7 +122,7 @@ Below we have an example of non-aligned centerline ends, as well as another cent
 
 Centerline ends must be aligned *relative to flow path* (i.e. same cross-section), and don't necessary have to end at the same point. 
 
-.. image:: images/draft_edits2.png
+.. image:: images/draft_edit2.png
    :width: 500
 
 Finally we have an example of prepped draft centerlines that are ready to finalize! They are continous, start and end at the same cross-section, 

@@ -121,11 +121,12 @@ Below we have an example of non-aligned centerline ends, as well as another cent
    :width: 500
 
 Centerline ends must be aligned *relative to flow path* (i.e. same cross-section), and don't necessary have to end at the same point. 
+Below we see an example of properly aligned centerline ends.
 
 .. image:: images/draft_edit2.png
    :width: 500
 
-Finally we have an example of prepped draft centerlines that are ready to finalize! They are continous, start and end at the same cross-section, 
+Finally we have an example of edited draft centerlines that are ready to be finalized! They are continous, start and end at the same cross-section, 
 and represent each flow stage's flow direction well.
 
 .. image:: images/draft_lines_prep.png
