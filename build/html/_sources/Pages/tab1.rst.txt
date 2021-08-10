@@ -33,7 +33,7 @@ Applied method flow chart
    :width: 500
 
 Example of a correctly set up input directory
-====================================
+=============================================
 
 .. image:: images/set_up_folder.png
    :width: 500
