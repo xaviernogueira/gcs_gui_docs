@@ -38,7 +38,7 @@ therefore we will select three flow stages of interest that do not inundate the 
 .. image:: images/pdf_plot.png
    :width: 500
 
-.. image:: images/cumulative_area.png
+.. image:: images/wetted_areas_plot_small_inc.png
     :width: 500
 
 We can notice that at 2.6ft flow stage elevation, there is a transition from relatively low wetted area accumulation to very rapid accumulation. This identifies 
@@ -126,7 +126,7 @@ Below we see an example of properly aligned centerline ends.
 .. image:: images/draft_edit2.png
    :width: 500
 
-Finally we have an example of edited draft centerlines that are ready to be finalized! They are continous, start and end at the same cross-section, 
+Here we have an example of edited draft centerlines that are ready to be finalized! They are continous, start and end at the same cross-section, 
 and represent each flow stage's flow direction well.
 
 .. image:: images/draft_lines_prep.png

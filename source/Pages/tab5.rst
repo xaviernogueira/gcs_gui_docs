@@ -102,6 +102,13 @@ sharp edges or small divergions, as they are fixed during finalization.
 
 Running the final centerline button on the GUI will result in a smoothed, dissolved (one segment) centerline file for each key flow stage, *centerlines/enterline_0p2ft*
 
+
+Applied method flow chart
+=========================
+
+.. image:: images/tab5_flow_chart.png
+   :width: 500
+
 Draft centerline editing examples
 =================================
 

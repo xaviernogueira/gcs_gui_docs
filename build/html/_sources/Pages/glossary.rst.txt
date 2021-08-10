@@ -20,3 +20,5 @@ Glossary
         a flood flow's active channel topogaphy, which may also includes floodplain, and valley scale elements. In GCS analysis, we study a given
         cross-section's relative geometry at different flow stages in order to capture any cross-section nesting trends/patterns across the river area of interest. 
 
+    Flow-convergence routing landforms
+        Fill out later...
