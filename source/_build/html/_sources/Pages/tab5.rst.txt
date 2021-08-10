@@ -78,7 +78,7 @@ cross-sections perpendicilar to flow, it's necessary to have flow stage specific
 - **Input:** Enter key flow stage heights separated by commas, ex: '0.2,0.7,2.6'
 - **Output:** A new sub-folder */centerlines* containing draft cennterline shapefiles
  
-     * ex: */centerlines/draft_centerline_0p2ft*
+     * ex: *centerlines/draft_centerline_0p2ft*
      * Stage heights converted to string format: 0.2 ft -> 0p2ft
   
 **Editing draft centerlines**
@@ -102,6 +102,32 @@ sharp edges or small divergions, as they are fixed during finalization.
 
 Running the final centerline button on the GUI will result in a smoothed, dissolved (one segment) centerline file for each key flow stage, *centerlines/enterline_0p2ft*
 
-Draft centerline editing example
-================================
+Draft centerline editing examples
+=================================
 
+Below is an example of a draft centerline issue. 
+
+.. image:: images/draft_line1.png
+   :width: 500
+
+To repair such an issue, the line segment on the right of the gap was trimmed, and a new line segment was drawn to connect the lines end to end. 
+
+.. image:: images/draft_edit1.png
+   :width: 500
+
+Below we have an example of non-aligned centerline ends, as well as another centerline gap.
+
+.. image:: images/draft_line2.png
+   :width: 500
+
+Centerline ends must be aligned *relative to flow path* (i.e. same cross-section), and don't necessary have to end at the same point. 
+Below we see an example of properly aligned centerline ends.
+
+.. image:: images/draft_edit2.png
+   :width: 500
+
+Finally we have an example of edited draft centerlines that are ready to be finalized! They are continous, start and end at the same cross-section, 
+and represent each flow stage's flow direction well.
+
+.. image:: images/draft_lines_prep.png
+   :width: 500

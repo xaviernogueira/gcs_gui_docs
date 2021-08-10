@@ -37,7 +37,7 @@
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="&lt;no title&gt;" href="interpreting.html" />
+    <link rel="next" title="Extracting Geomorphic Covariance Structure (GCS) series" href="tab6.html" />
     <link rel="prev" title="Thalweg based DEM detrending" href="tab4.html" /> 
 </head>
 
@@ -96,9 +96,11 @@
 <li class="toctree-l2"><a class="reference internal" href="#draft-centerline-editing-examples">Draft centerline editing examples</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="tab6.html">Extracting Geomorphic Covariance Structure (GCS) series</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Information</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="interpreting.html">Intepreting results</a></li>
 <li class="toctree-l1"><a class="reference internal" href="literature.html">Literature</a></li>
 <li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
 <li class="toctree-l1"><a class="reference internal" href="acknowledgements.html">Acknowledgements</a></li>
@@ -207,18 +209,18 @@ Next, wetted area centerlines are developed for each chosen key flow stage to ac
 <div class="section" id="key-flow-stage-selection-example">
 <h2>Key flow stage selection example<a class="headerlink" href="#key-flow-stage-selection-example" title="Permalink to this headline">¶</a></h2>
 <p>Below we see an example of a detrended DEM, along with it's thalweg identified in red.</p>
-<a class="reference internal image-reference" href="../_images/detrended.png"><img alt="../_images/detrended.png" src="../_images/detrended.png" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="Pages/images/detrended.png"><img alt="Pages/images/detrended.png" src="Pages/images/detrended.png" style="width: 500px;" /></a>
 <p>Due to the nature of the flat, wide floodplain we can observe DEM quality issues distal from the channel (see <a class="reference internal" href="tab4.html#detrend-error"><span class="std std-ref">detrending warning</span></a>),
 therefore we will select three flow stages of interest that do not inundate the flood plain. Firstly, we choose to reference the <em>pdf_plot.png</em> and <em>cumulative_area.png</em> plots.</p>
-<a class="reference internal image-reference" href="../_images/pdf_plot.png"><img alt="../_images/pdf_plot.png" src="../_images/pdf_plot.png" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="Pages/images/pdf_plot.png"><img alt="Pages/images/pdf_plot.png" src="Pages/images/pdf_plot.png" style="width: 500px;" /></a>
 <a class="reference internal image-reference" href="Pages/images/cumulative_area.png"><img alt="Pages/images/cumulative_area.png" src="Pages/images/cumulative_area.png" style="width: 500px;" /></a>
 <p>We can notice that at 2.6ft flow stage elevation, there is a transition from relatively low wetted area accumulation to very rapid accumulation. This identifies
 a topographic threshold at the boundary between channelized and floodplain topography. <strong>Therefore we define 2.6ft as a key flow stage</strong>.</p>
 <p>Looking at the idealized cross-sectional geometry plot, <em>mean_XS_plot.png</em>, we can see this transition clearly.</p>
-<a class="reference internal image-reference" href="../_images/mean_XS_plot.png"><img alt="../_images/mean_XS_plot.png" src="../_images/mean_XS_plot.png" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="Pages/images/mean_XS_plot.png"><img alt="Pages/images/mean_XS_plot.png" src="Pages/images/mean_XS_plot.png" style="width: 500px;" /></a>
 <p>Next we look at the detrended DEM itself, along with the wetted area polygons within the output folder, to idenitfy other flow stage elevations of interest.
 <strong>In this example we select 0.2 ft, 0.7 ft, 2.6 ft as our key flow stage elevations</strong>.</p>
-<a class="reference internal image-reference" href="../_images/flow_stages.png"><img alt="../_images/flow_stages.png" src="../_images/flow_stages.png" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="Pages/images/flow_stages.png"><img alt="Pages/images/flow_stages.png" src="Pages/images/flow_stages.png" style="width: 500px;" /></a>
 <p>Above we can see that each of these flow stages inundate different scales of
 the channelized topography, and have discernably different wetted area geometries.</p>
 </div>
@@ -274,17 +276,17 @@ sharp edges or small divergions, as they are fixed during finalization.</p>
 <div class="section" id="draft-centerline-editing-examples">
 <h2>Draft centerline editing examples<a class="headerlink" href="#draft-centerline-editing-examples" title="Permalink to this headline">¶</a></h2>
 <p>Below is an example of a draft centerline issue.</p>
-<a class="reference internal image-reference" href="../_images/draft_line1.png"><img alt="../_images/draft_line1.png" src="../_images/draft_line1.png" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="Pages/images/draft_line1.png"><img alt="Pages/images/draft_line1.png" src="Pages/images/draft_line1.png" style="width: 500px;" /></a>
 <p>To repair such an issue, the line segment on the right of the gap was trimmed, and a new line segment was drawn to connect the lines end to end.</p>
-<a class="reference internal image-reference" href="../_images/draft_edit1.png"><img alt="../_images/draft_edit1.png" src="../_images/draft_edit1.png" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="Pages/images/draft_edit1.png"><img alt="Pages/images/draft_edit1.png" src="Pages/images/draft_edit1.png" style="width: 500px;" /></a>
 <p>Below we have an example of non-aligned centerline ends, as well as another centerline gap.</p>
-<a class="reference internal image-reference" href="../_images/draft_line2.png"><img alt="../_images/draft_line2.png" src="../_images/draft_line2.png" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="Pages/images/draft_line2.png"><img alt="Pages/images/draft_line2.png" src="Pages/images/draft_line2.png" style="width: 500px;" /></a>
 <p>Centerline ends must be aligned <em>relative to flow path</em> (i.e. same cross-section), and don't necessary have to end at the same point.
 Below we see an example of properly aligned centerline ends.</p>
-<a class="reference internal image-reference" href="../_images/draft_edit2.png"><img alt="../_images/draft_edit2.png" src="../_images/draft_edit2.png" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="Pages/images/draft_edit2.png"><img alt="Pages/images/draft_edit2.png" src="Pages/images/draft_edit2.png" style="width: 500px;" /></a>
 <p>Finally we have an example of edited draft centerlines that are ready to be finalized! They are continous, start and end at the same cross-section,
 and represent each flow stage's flow direction well.</p>
-<a class="reference internal image-reference" href="../_images/draft_lines_prep.png"><img alt="../_images/draft_lines_prep.png" src="../_images/draft_lines_prep.png" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="Pages/images/draft_lines_prep.png"><img alt="Pages/images/draft_lines_prep.png" src="Pages/images/draft_lines_prep.png" style="width: 500px;" /></a>
 </div>
 </div>
 
@@ -296,7 +298,7 @@ and represent each flow stage's flow direction well.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="interpreting.html" class="btn btn-neutral float-right" title="&lt;no title&gt;" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="tab6.html" class="btn btn-neutral float-right" title="Extracting Geomorphic Covariance Structure (GCS) series" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="tab4.html" class="btn btn-neutral float-left" title="Thalweg based DEM detrending" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

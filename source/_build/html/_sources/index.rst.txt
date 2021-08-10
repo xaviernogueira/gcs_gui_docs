@@ -54,6 +54,7 @@ We will try to respond expeditiously, and update the software when necessary.
    Pages/tab3
    Pages/tab4
    Pages/tab5
+   Pages/tab6
 
 .. toctree::
    :maxdepth: 2

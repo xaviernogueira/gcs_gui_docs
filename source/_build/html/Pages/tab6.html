@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Intepreting results &mdash; gcs_gui_documentation 1.0 documentation</title>
+  <title>Extracting Geomorphic Covariance Structure (GCS) series &mdash; gcs_gui_documentation 1.0 documentation</title>
   
 
   
@@ -37,7 +37,7 @@
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Literature" href="literature.html" />
+    <link rel="next" title="Intepreting results" href="interpreting.html" />
     <link rel="prev" title="Selecting key flow stage heights + refining center-lines" href="tab5.html" /> 
 </head>
 
@@ -83,16 +83,17 @@
             
             
               <p class="caption"><span class="caption-text">Processing steps</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="tab1.html">Prepping LiDAR data from processing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tab2.html">Generating a ground-surface DEM from LiDAR data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tab3.html">Generating a thalweg centerline + elevation profile</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tab4.html">Thalweg based DEM detrending</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tab5.html">Selecting key flow stage heights + refining center-lines</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Extracting Geomorphic Covariance Structure (GCS) series</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Information</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Intepreting results</a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="interpreting.html">Intepreting results</a></li>
 <li class="toctree-l1"><a class="reference internal" href="literature.html">Literature</a></li>
 <li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
 <li class="toctree-l1"><a class="reference internal" href="acknowledgements.html">Acknowledgements</a></li>
@@ -141,13 +142,13 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>Intepreting results</li>
+      <li>Extracting Geomorphic Covariance Structure (GCS) series</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/Pages/interpreting.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/Pages/tab6.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -160,8 +161,13 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="intepreting-results">
-<h1>Intepreting results<a class="headerlink" href="#intepreting-results" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="extracting-geomorphic-covariance-structure-gcs-series">
+<h1>Extracting Geomorphic Covariance Structure (GCS) series<a class="headerlink" href="#extracting-geomorphic-covariance-structure-gcs-series" title="Permalink to this headline">¶</a></h1>
+<p>In this step we extract width (W) and mean detrended bed elevation (Z), a inverse proxy for depth, across the longitudinal extent of
+the river segment via dense, evenly spaced, cross-sectional rectangles (see examples). W and Z value are standardized to capture relative cross-sectional geomtry, yielding
+Ws and Zs respecively. Cross-sections with Ws &gt; 0 are wider than the mean, and cross-sections with Zs &gt; 0 are shallower (higher bed elevation) than the mean.
+Multiplying Ws and Zs, due to the their standardized nature (see <span class="xref std std-ref">Intepreting results</span>) calculates their covariance at a given cross section, C(Ws,Zs). Each cross-sections W, Z, Ws, Zs, C(Ws, Zs) value
+are stored in a csv file that is the basis for Geomorphic Covariance Structure analysis (see <span class="xref std std-ref">Literature</span>).</p>
 </div>
 
 
@@ -172,7 +178,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="literature.html" class="btn btn-neutral float-right" title="Literature" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="interpreting.html" class="btn btn-neutral float-right" title="Intepreting results" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="tab5.html" class="btn btn-neutral float-left" title="Selecting key flow stage heights + refining center-lines" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
