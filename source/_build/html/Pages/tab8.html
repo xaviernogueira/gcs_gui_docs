@@ -1,0 +1,257 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="English" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="English" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>GCS nesting analysis outputs &mdash; gcs_gui_documentation 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Background geomorphology" href="fcr_theory.html" />
+    <link rel="prev" title="GCS stage analysis outputs" href="tab7.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> gcs_gui_documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Processing steps</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="tab1.html">Prepping LiDAR data from processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tab2.html">Generating a ground-surface DEM from LiDAR data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tab3.html">Generating a thalweg centerline + elevation profile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tab4.html">Thalweg based DEM detrending</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tab5.html">Selecting key flow stage heights + refining center-lines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tab6.html">Extracting Geomorphic Covariance Structure (GCS) series</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tab7.html">GCS stage analysis outputs</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">GCS nesting analysis outputs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#methodology-motivation">Methodology + motivation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#outputs">Outputs</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="fcr_theory.html">Background geomorphology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="literature.html">Literature</a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="acknowledgements.html">Acknowledgements</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">gcs_gui_documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>GCS nesting analysis outputs</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/Pages/tab8.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="gcs-nesting-analysis-outputs">
+<h1>GCS nesting analysis outputs<a class="headerlink" href="#gcs-nesting-analysis-outputs" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="methodology-motivation">
+<h2>Methodology + motivation<a class="headerlink" href="#methodology-motivation" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Cross-sections along each of the selected flow stage centerlines are aligned to the longest centerline path (typically the lowest flow stage) based on Euclidian distance.</p></li>
+<li><p>Ws, Zs, C(Ws, Zs) values are aligned for all flow stages, faciliating comparison.</p></li>
+<li><p>GCS nesting analysis attempts to capture the <a class="reference external" href="https://onlinelibrary.wiley.com/doi/10.1002/esp.4411">nested hierarchical topographic structure</a> of the study river.</p></li>
+<li><p>Nesting patterns associated with landforms can be provide insight into which flow stages (and their respective discharges) contribute to maintaining desirable aspects of channel topography such as <a class="reference internal" href="glossary.html#term-Riffle-pool-sequences"><span class="xref std std-term">riffle-pool sequences</span></a>, or heterogeneity broadly.</p></li>
+</ul>
+</div>
+<div class="section" id="outputs">
+<h2>Outputs<a class="headerlink" href="#outputs" title="Permalink to this headline">¶</a></h2>
+<p>Plots output to <em>/nesting_analysis/</em> <strong>IF</strong> <code class="docutils literal notranslate"><span class="pre">Run</span> <span class="pre">GCS</span> <span class="pre">nesting</span> <span class="pre">analysis?</span></code> is set to <strong>Yes</strong></p>
+<ul>
+<li><p>A individual plot for Ws, Zs, and C(Ws, Zs) showing series for each key flow stage, ex: <em>nesting_analysis/nested_Ws_plot.png</em></p></li>
+<li><p>A plot showing all key flow stage relative landform abundance pie charts together, ex: <em>nesting_analysis/landform_pies.png</em></p></li>
+<li><p>A plot showing heatplots visualizing the 2D distribution of cross-sectional paired Ws, Zs for all key flow stages, ex: <em>nesting_analysis/key_heatplots.png</em></p></li>
+<li><p>Two Sankey Diagram visualizing cross-section landform transitions as flow stage increases. One with 'normal' cross-sections, ex: <em>nesting_analysis/landform_transitions.png</em>, and one without,  ex: <em>gcs_plots/landform_transitions_nonorm.png</em></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Statistics and Chi-squared significance levels associated with transition abundance relative to landform abundance are output at <em>nesting_analysis/transition_stats.txt</em></p></li>
+<li><p>Chi-squared expected frequency parameter is defined by the relative landform abundance at the higher flow stage for a given transition.</p></li>
+<li><p>For example, take a river where 50% of cross-sections that are <em>nozzles</em> (narrow and shallow) at a 0.7ft flow stage transition into wide bars (wide and shallow) at a 1.2ft flow stage. If <em>wide bar</em> cross-sections only represent 20% of the higher flow stage, we can say that nozzles preferentially transition into wide bars if significant at the p &lt; 0.05 level.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Violin plots visualizing whether relative topographic highs and lows (abs(Zs) &gt; 0.5) are preferentially nested within wider or narrow (abs(Ws) &gt; 0.5) geometry at the next higher flow, ex: <a href="#id1"><span class="problematic" id="id2">*</span></a>nesting_analysis/violin_plots.png</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Statistics and Welch's T-test significance levels associated with preferred nesting structure are output at <em>nesting_analysis/violin_stats.txt</em></p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="fcr_theory.html" class="btn btn-neutral float-right" title="Background geomorphology" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="tab7.html" class="btn btn-neutral float-left" title="GCS stage analysis outputs" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2021, Xavier Nogueira
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

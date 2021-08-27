@@ -8,7 +8,7 @@ Inputs
 
 - The thalweg elevation profile .csv file, *xyz_elevation_table.csv*
 - The generated topo-bathymetric digital elevation model, *las_dem.tif*
-- **USER INPUT:** Thaleg elevation profile slope break points separated by commas
+- **USER INPUT:** Thalweg elevation profile slope break points separated by commas
 
    * Separated by commas in ascending order 
    * i.e. *500,1000,1800,2900*
@@ -23,12 +23,12 @@ We start by plotting a linear fit without breakpoints, and observing the residua
    :width: 500
 
 As you can see, there are segments with considerable linearity at a scale greater 
-than typical in-channel topographic heterogeniety. We mark these segments below.    
+than typical in-channel topographic heterogeneity. We mark these segments below.    
 
 .. image:: images/res2_ex.png
    :width: 500
 
-We then enter these slope breakpoints in the specified manner, and examine the quality of the piecewise linear fit. 
+We then enter these slope breakpoints in the specified manner and examine the quality of the piecewise linear fit. 
 
 .. image:: images/linear_ex.png
    :width: 500
@@ -53,7 +53,7 @@ Relevant Outputs
 
 
 
-.. warning:: Wide, flat floodplains can cause erroneous artifacts of the detrendeding methodlogy to be observable, especially farther from the thalweg. 
+.. warning:: Wide, flat floodplains can cause erroneous artifacts of the detrending methodology to be observable, especially farther from the thalweg. 
 
 
 Applied method flow chart

@@ -1,0 +1,310 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="English" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="English" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Extracting Geomorphic Covariance Structure (GCS) series &mdash; gcs_gui_documentation 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="GCS stage analysis outputs" href="tab7.html" />
+    <link rel="prev" title="Selecting key flow stage heights + refining center-lines" href="tab5.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> gcs_gui_documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Processing steps</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="tab1.html">Prepping LiDAR data from processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tab2.html">Generating a ground-surface DEM from LiDAR data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tab3.html">Generating a thalweg centerline + elevation profile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tab4.html">Thalweg based DEM detrending</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tab5.html">Selecting key flow stage heights + refining center-lines</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Extracting Geomorphic Covariance Structure (GCS) series</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#inputs">Inputs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#extracted-cross-sectional-values">Extracted cross-sectional values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#relevant-outputs">Relevant outputs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#choosing-cross-section-lengths">Choosing cross-section lengths</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#using-a-clip-polygon-optional">Using a clip polygon (optional)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tab7.html">GCS stage analysis outputs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tab8.html">GCS nesting analysis outputs</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="fcr_theory.html">Background geomorphology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="literature.html">Literature</a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="acknowledgements.html">Acknowledgements</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">gcs_gui_documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Extracting Geomorphic Covariance Structure (GCS) series</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/Pages/tab6.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="extracting-geomorphic-covariance-structure-gcs-series">
+<h1>Extracting Geomorphic Covariance Structure (GCS) series<a class="headerlink" href="#extracting-geomorphic-covariance-structure-gcs-series" title="Permalink to this headline">¶</a></h1>
+<p>In this step we extract width (W) and mean detrended bed elevation (Z), a inverse proxy for depth, across the longitudinal extent of
+the river segment via dense, evenly spaced, cross-sectional rectangles (see examples). W and Z value are standardized to capture relative cross-sectional geometry, yielding
+Ws and Zs respectively. Cross-sections with Ws &gt; 0 are wider than the mean, and cross-sections with Zs &gt; 0 are shallower (higher bed elevation) than the mean.
+Multiplying Ws and Zs, due to the their standardized nature (see <span class="xref std std-ref">interpreting results</span>) calculates their covariance at a given cross section, C(Ws, Zs). Each cross-sections W, Z, Ws, Zs, C(Ws, Zs) value
+are stored in a csv file that is the basis for Geomorphic Covariance Structure analysis (see <span class="xref std std-ref">Literature</span>).</p>
+<div class="section" id="inputs">
+<h2>Inputs<a class="headerlink" href="#inputs" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p>The detrended DEM, <em>ras_detren.tif</em></p></li>
+<li><p>Key flow stage elevations separated by commas, ex: <em>'0.2,0.7,2.6'</em></p></li>
+<li><p><strong>USER INPUT:</strong> Cross-section spacing in the same units as the DEM</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Spacing should be &gt;= DEM resolution.</p></li>
+<li><p>Typically defined relative to river width. Past analysis used 1/20th of typical bankfull width.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>USER INPUT:</strong> Cross-section lengths for each key flow stage separated by commas, ex: <em>'200,400,1000'</em></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>In the same units as the DEM</p></li>
+<li><p>Must be entered corresponding to the key flow stage elevation order. ex: <em>'0.2,0.7,2.6'</em> / <em>'200,400,1000'</em> where 200m cross-sections are used for the 0.2m flow stage.</p></li>
+</ul>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Please see the <a class="reference internal" href="#choosing"><span class="std std-ref">choosing cross-section lengths</span></a> section below before defining cross-section lengths!</p>
+</div>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="extracted-cross-sectional-values">
+<h2>Extracted cross-sectional values<a class="headerlink" href="#extracted-cross-sectional-values" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Values represents the mean of a given cross-sectional polygon, which has a length set by the cross-section spacing parameter.</p></li>
+<li><p>A new folder, <em>gcs_tables/</em>  is made to store .csv files with all cross-sectional data for each flow stage, ex: <em>gcs_tables/0p2m_gcs_table.csv</em></p></li>
+</ul>
+<p><strong>Extracted values and their .csv file headers:</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Width : <code class="docutils literal notranslate"><span class="pre">W</span></code></p></li>
+<li><p>Detrended bed elevation : <code class="docutils literal notranslate"><span class="pre">Z</span></code></p></li>
+<li><p>Mean elevation : <code class="docutils literal notranslate"><span class="pre">elevation</span></code> (not detrended)</p></li>
+<li><p>Mean depth : <code class="docutils literal notranslate"><span class="pre">d_mean</span></code> = flow stage height - Z</p></li>
+<li><p>Width / depth ratio : <code class="docutils literal notranslate"><span class="pre">wd_ratio</span></code></p></li>
+<li><p>standardized width : <code class="docutils literal notranslate"><span class="pre">Ws</span></code></p></li>
+<li><p>Standardized detrended bed elevation : <code class="docutils literal notranslate"><span class="pre">Zs</span></code></p></li>
+<li><p>Ws, Zs covariance, C(Ws, Zs) : <code class="docutils literal notranslate"><span class="pre">Ws_Zs</span></code> = Ws * Zs</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="relevant-outputs">
+<h2>Relevant outputs<a class="headerlink" href="#relevant-outputs" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p>A new folder, <em>gcs_tables/</em> for storing .csv files</p></li>
+<li><p>A .csv file for each key flow stage storing the longitudinal W, Z, Ws, Zs, and C(Ws, Zs) series, ex: <em>gcs_tables/0p2m_gcs_table.csv</em></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>From upstream to downstream, capturing the topography a flow interacts with along its path.</p></li>
+<li><p><span class="xref std std-ref">Flow convergence routing (FCR) theory</span> designation codes are also stored in the table, facilitating landform analysis.</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="choosing-cross-section-lengths">
+<h2>Choosing cross-section lengths<a class="headerlink" href="#choosing-cross-section-lengths" title="Permalink to this headline">¶</a></h2>
+<p>SHOW EXAMPLE OF TOO SHORT, TOO LONG, and JUST RIGHT</p>
+</div>
+<div class="section" id="using-a-clip-polygon-optional">
+<h2>Using a clip polygon (optional)<a class="headerlink" href="#using-a-clip-polygon-optional" title="Permalink to this headline">¶</a></h2>
+<p>There is the option to further reduce / clip the study area before extracting GCS series. This is done by manually generating a polygon that overlaps with
+what should be included and defining it's spatial reference to match the project.</p>
+<p>We generally use clip polygons for one of two reasons:</p>
+<ol class="arabic simple">
+<li><p>To reduce the longitudinal extent of the study area.</p></li>
+<li><p>To exclude wetted area polygon quality issues related to DEM detrending artefacts.</p></li>
+</ol>
+<p>For example, we can see below that there low lying areas of the floodplain are erroneously included in the 2.6 ft flow stage wetted area polygon.
+Here we made the clip polygon (black) that to excludes such errors, resulting in the quality cross-section polygons shown in the figure.</p>
+<a class="reference internal image-reference" href="../_images/clip_rects.png"><img alt="../_images/clip_rects.png" src="../_images/clip_rects.png" style="width: 500px;" /></a>
+<p>Another strategy is altering cross-section lengths, which can work in most settings where the issues are far from the channel.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="tab7.html" class="btn btn-neutral float-right" title="GCS stage analysis outputs" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="tab5.html" class="btn btn-neutral float-left" title="Selecting key flow stage heights + refining center-lines" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2021, Xavier Nogueira
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

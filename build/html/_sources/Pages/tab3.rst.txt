@@ -1,14 +1,14 @@
 Generating a thalweg centerline + elevation profile
 +++++++++++++++++++++++++++++++++++++++++++++++++++
 A :term:`thalweg` centerline is generated using a smoothed version of the :term:`topo-bathymetric DEM`. Elevation values are sampled 
-along the centerline at 1m intervals, and used to generate a thalweg elevation profile CSV file.
+along the centerline at 1m intervals and used to generate a thalweg elevation profile CSV file.
 
 Inputs
 ======
 
 - **USER GENERATED:** An upstream flow polygon that intersects the thalweg centerline
   
-    * This defines the top of the thalweg longitidnal elevation profile
+    * This defines the top of the thalweg longitudinal elevation profile
     * Generate manually in ArcPro or ArcGIS, define projection to match the thalweg centerline!
 - The area of interest (AOI) shapefile
 - Number of low pass filter runs to smooth topography with (15 is default)

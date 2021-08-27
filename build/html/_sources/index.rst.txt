@@ -19,7 +19,8 @@ Pre-requisite packages
 ======================
 - ``arcpy`` 
 
-  * (w/ Spatial Analyst licence) Comes with ArcGIS Python 3 default environment. Clone environment to enable external package installation.
+.. attention:: ``arcpy`` must be associated with a valid ArcPro license. The GUI must be ran using a `clone of the default ArcPro Python 3 environment <https://pro.arcgis.com/en/pro-app/latest/arcpy/get-started/work-with-python-environments.htm>`_! 
+
 - ``pillow``
 
   * https://python-pillow.org/
@@ -29,6 +30,23 @@ Pre-requisite packages
 - ``seaborn``
 
   * https://seaborn.pydata.org/
+  * - ``plotly``
+
+  * https://plotly.com/python/
+- ``openpyxl``
+
+  * https://openpyxl.readthedocs.io/ 
+
+
+All non- ``arcpy`` packages can be installed to the `cloned ArcPro Python environment <https://pro.arcgis.com/en/pro-app/latest/arcpy/get-started/work-with-python-environments.htm>`_
+by simply using the ArcPro Python Package Manager or via ``conda`` in the command line::
+
+    $ conda activate ...\ESRI\conda\envs\arcgispro-py3-clone\python.exe  
+    $ conda install pillow
+    $ conda install plotly
+    $ conda install seaborn
+    $ conda install plotly
+    $ conda install openpyxl
 
 .. _Setting up:
 Setting up 
@@ -42,7 +60,7 @@ Create a folder containing following:
 
 Bugs and errors
 =================================
-Do not hesistate to contact xavier.rojas.nogueira@gmail.com with bug reports, errors, or other feedback. 
+Do not hesitate to contact xavier.rojas.nogueira@gmail.com with bug reports, errors, or other feedback. 
 We will try to respond expeditiously, and update the software when necessary.
 
 .. toctree::
@@ -55,13 +73,15 @@ We will try to respond expeditiously, and update the software when necessary.
    Pages/tab4
    Pages/tab5
    Pages/tab6
-
+   Pages/tab7
+   Pages/tab8
    
+
 .. toctree::
    :maxdepth: 2
    :caption: Information
 
-   Pages/interpreting
+   Pages/fcr_theory
    Pages/literature
    Pages/glossary
    Pages/acknowledgements
