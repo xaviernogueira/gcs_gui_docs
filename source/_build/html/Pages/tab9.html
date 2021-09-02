@@ -1,0 +1,299 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="English" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="English" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Export to River Builder &mdash; gcs_gui_documentation 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> gcs_gui_documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Processing steps</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tab1.html">Prepping LiDAR data from processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tab2.html">Generating a ground-surface DEM from LiDAR data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tab3.html">Generating a thalweg centerline + elevation profile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tab4.html">Thalweg based DEM detrending</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tab5.html">Selecting key flow stage heights + refining center-lines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tab6.html">Extracting Geomorphic Covariance Structure (GCS) series</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tab7.html">GCS stage analysis outputs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tab8.html">GCS nesting analysis outputs</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="fcr_theory.html">Background geomorphology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="literature.html">Literature</a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="acknowledgements.html">Acknowledgements</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">gcs_gui_documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Export to River Builder</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/Pages/tab9.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="export-to-river-builder">
+<h1>Export to River Builder<a class="headerlink" href="#export-to-river-builder" title="Permalink to this headline">¶</a></h1>
+<p>This software can also be used to export channel geometry to <a class="reference external" href="https://github.com/RiverBuilder/RiverBuilder">River Builder</a>.</p>
+<p>River Builder is a piece of software that converts geometric variabtity functions to a modeled river
+topography. River Builder takes inputs from a textfile describing desired river geometry using geomeotric variability functions,
+and outputs a digital elevation model (DEM) with generated terrain, as well as different plots.</p>
+<p>A variety of geometric variability are supported, and can define longitudinally variable aspects of the channel geomoetry such as
+width oscillations at multiple scales of <a class="reference internal" href="glossary.html#term-Nested-topography"><span class="xref std std-term">nested topography</span></a>. A detailed description of all possible River Builder inputs and outputs is beyond the scope of this documentaion, but provided
+<a class="reference external" href="https://github.com/RiverBuilder/RiverBuilder/blob/master/RiverBuilder_User_Manual_1.2.0_final.pdf">here</a>.</p>
+<div class="section" id="real-world-topography-to-river-builder">
+<h2>Real world topography to River Builder<a class="headerlink" href="#real-world-topography-to-river-builder" title="Permalink to this headline">¶</a></h2>
+<p>This GUI allows the width (W) and detrended elevation (Z) series extracted by GCS analysis to be converted into River Builder inputs via generating geomeotric variability functions.</p>
+<p><strong>Background:</strong></p>
+<ul class="simple">
+<li><p>River Builder can take a list of sine and/or cosine functions and add them together to recreate complex channel geomeotry oscillations.</p></li>
+<li><p>A Fast Fourier Transform (FFT) is a signal processing technique that decomposes an original signal to an additive list of frequencies, which can be represnted as harmonic function.</p></li>
+<li><p>An Inverse Fast Fourier Transform (IFFT) takes an additive list of frequencies as an input, and reconstructs the original signal.</p></li>
+</ul>
+<p><strong>Processing steps:</strong></p>
+<ol class="arabic">
+<li><p>A GCS extracted series, for example width (W), is intepreted as a signal and decomposed into the frequency domain using an FFT.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>FFT output lengths depend on signal length, and can include many harmonic component (&gt; 100 in most cases)</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>While Width (W) series for all input flow stages are exported, only the detrended elevation (Z) series of only the lowest flow stage is used.</p>
+</div>
+</div></blockquote>
+</li>
+<li><p>Simplified versions of the original signal are generated. An IFFT is created for subsects of the FFT generated frequencies, starting with the first frequency and iteratively adding on others.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>For example, the first IFFT could construct a signal for 2*sin(4(x − 0.5))</p></li>
+<li><p>Next the first frequency plus the next one from the FFT decomposition is reconstructed: 2*sin(4(x − 0.5)) + 3*sin(2(x − 0.75))</p></li>
+<li><p>And so on: 2*sin(4(x − 0.5)) + 3*sin(2(x − 0.75)) + sin(x + 0.25)</p></li>
+<li><p>2*sin(4(x − 0.5)) + 3*sin(2(x − 0.75)) + sin(x + 0.25) + 4sin(3(x + 1.2))</p></li>
+<li><p>2*sin(4(x − 0.5)) + 3*sin(2(x − 0.75)) + sin(x + 0.25) + 4sin(3(x + 1.2)) + 2sin(x - 4)</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>As frequencies are added, the simularity of the recomposed signals approaches the original signal. At a correlation threshold defined by the input R^2 parameter, frequencies are no longer added.</p></li>
+<li><p>The final list of frequencies (adding up to be sufficiently correlated with the orignal signal) are converted into periodic functions, and formatted as a River Builder input text file.</p></li>
+</ol>
+<p>Output text files are saved in a new folder, <em>/River_Builder_inputs</em>. The user will then have to follow
+<a class="reference external" href="https://github.com/RiverBuilder/RiverBuilder/blob/master/RiverBuilder_User_Manual_1.2.0_final.pdf">River Builder documentation</a> to generate terrain.</p>
+</div>
+<div class="section" id="gui-inputs">
+<h2>GUI inputs<a class="headerlink" href="#gui-inputs" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p>Flow stage elevations separated by commas, ex: <em>'0.2,0.7,2.6'</em></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Each added flow stage will have it's width (W) series converted into a list of River Builder input functions in a separate text file.</p></li>
+<li><p>The detrended elevation of the River Builder terrain centerline is defined by the lowest flow stage's Z series.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>R^2 threshold: A float between 0 and 1, ex: '0.78'</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Refers to the coefficient of correlation between the original signal, and the reconstructed (IFFT) signal w/ N number of FFT frequencies included.</p></li>
+<li><p>A higher R^2 threshold will mean that more frequencies from the original signal FFT are exported, increasing the complexity of the River Builder terrain.</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="outputs">
+<h2>Outputs<a class="headerlink" href="#outputs" title="Permalink to this headline">¶</a></h2>
+<p>A new folder <em>/River_Builder_inputs</em> is created to store the following textfiles.</p>
+<ul class="simple">
+<li><p>Textfiles storing River Builder periodic functions (see example below) that represent the width series for each input flow stage, ex: <em>W_0.4ft_RB.txt</em>.</p></li>
+<li><p>A textfile storing the minimum lateral offset for channel width, <em>XX_offset.txt</em>.</p></li>
+</ul>
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>A River Builder input file that will be used to define inner channel width.</p></li>
+</ul>
+<img alt="../_images/rb_in.png" src="../_images/rb_in.png" />
+<ul class="simple">
+<li><p>An example of a produced River Builder channel planform plot, with two input width series (inner channel in orange, outer channel in green).</p></li>
+</ul>
+<img alt="../_images/SRVlevels_xy.png" src="../_images/SRVlevels_xy.png" />
+<ul class="simple">
+<li><p>The River Builder generated terrain corresponding to the above planform, in both DEM (top) and TIN (bottom) formats.</p></li>
+</ul>
+<img alt="../_images/sfe_dem.png" src="../_images/sfe_dem.png" />
+<img alt="../_images/TIN.png" src="../_images/TIN.png" />
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2021, Xavier Nogueira
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -40,17 +40,6 @@ Extracted cross-sectional values
     * Ws, Zs covariance, C(Ws, Zs) : ``Ws_Zs`` = Ws * Zs
 
 
-
-Relevant outputs
-================
-
-- A new folder, *gcs_tables/* for storing .csv files
-- A .csv file for each key flow stage storing the longitudinal W, Z, Ws, Zs, and C(Ws, Zs) series, ex: *gcs_tables/0p2m_gcs_table.csv*
-  
-     * From upstream to downstream, capturing the topography a flow interacts with along its path.
-     * :ref:`Flow convergence routing (FCR) theory` designation codes are also stored in the table, facilitating landform analysis.
-
-
 .. _choosing:
 Choosing cross-section lengths
 ==============================

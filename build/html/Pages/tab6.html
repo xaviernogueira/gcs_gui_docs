@@ -92,13 +92,13 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Extracting Geomorphic Covariance Structure (GCS) series</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#inputs">Inputs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#extracted-cross-sectional-values">Extracted cross-sectional values</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#relevant-outputs">Relevant outputs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#choosing-cross-section-lengths">Choosing cross-section lengths</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#using-a-clip-polygon-optional">Using a clip polygon (optional)</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="tab7.html">GCS stage analysis outputs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tab8.html">GCS nesting analysis outputs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tab9.html">Export to River Builder</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Information</span></p>
 <ul>
@@ -223,20 +223,6 @@ are stored in a csv file that is the basis for Geomorphic Covariance Structure a
 <li><p>Ws, Zs covariance, C(Ws, Zs) : <code class="docutils literal notranslate"><span class="pre">Ws_Zs</span></code> = Ws * Zs</p></li>
 </ul>
 </div></blockquote>
-</div>
-<div class="section" id="relevant-outputs">
-<h2>Relevant outputs<a class="headerlink" href="#relevant-outputs" title="Permalink to this headline">¶</a></h2>
-<ul>
-<li><p>A new folder, <em>gcs_tables/</em> for storing .csv files</p></li>
-<li><p>A .csv file for each key flow stage storing the longitudinal W, Z, Ws, Zs, and C(Ws, Zs) series, ex: <em>gcs_tables/0p2m_gcs_table.csv</em></p>
-<blockquote>
-<div><ul class="simple">
-<li><p>From upstream to downstream, capturing the topography a flow interacts with along its path.</p></li>
-<li><p><span class="xref std std-ref">Flow convergence routing (FCR) theory</span> designation codes are also stored in the table, facilitating landform analysis.</p></li>
-</ul>
-</div></blockquote>
-</li>
-</ul>
 </div>
 <div class="section" id="choosing-cross-section-lengths">
 <h2>Choosing cross-section lengths<a class="headerlink" href="#choosing-cross-section-lengths" title="Permalink to this headline">¶</a></h2>
