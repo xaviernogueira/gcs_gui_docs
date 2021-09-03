@@ -75,6 +75,7 @@ We will try to respond expeditiously, and update the software when necessary.
    Pages/tab6
    Pages/tab7
    Pages/tab8
+   Pages/tab9
    
 
 .. toctree::

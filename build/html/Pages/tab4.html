@@ -197,13 +197,14 @@ This allows the resulting detrended DEM cell values to be a proxy for <a class="
 <div class="section" id="slope-breakpoint-selection-example">
 <h2>Slope breakpoint selection example<a class="headerlink" href="#slope-breakpoint-selection-example" title="Permalink to this headline">¶</a></h2>
 <p>We start by plotting a linear fit without breakpoints, and observing the residual plot:</p>
-<a class="reference internal image-reference" href="Pages/images/res1_ex.png"><img alt="Pages/images/res1_ex.png" src="Pages/images/res1_ex.png" style="width: 500px;" /></a>
-<p>As you can see, there are segments with considerable linearity at a scale greater
-than typical in-channel topographic heterogeneity. We mark these segments below.</p>
-<a class="reference internal image-reference" href="Pages/images/res2_ex.png"><img alt="Pages/images/res2_ex.png" src="Pages/images/res2_ex.png" style="width: 500px;" /></a>
-<p>We then enter these slope breakpoints in the specified manner and examine the quality of the piecewise linear fit.</p>
-<p>In this case the quality of the fit seems suitable, and we have eliminated large scale linearity within the residual plot, therefore we could
-proceed to click the 'Detrend DEM!' button in the GUI.</p>
+<a class="reference internal image-reference" href="../_images/residual_plot_no_bp.png"><img alt="../_images/residual_plot_no_bp.png" src="../_images/residual_plot_no_bp.png" style="width: 500px;" /></a>
+<p>As you can see, there are segments with considerable linearity at a scale greater than typical in-channel topographic heterogeneity. We mark these segments below.</p>
+<a class="reference internal image-reference" href="../_images/marked_residual.png"><img alt="../_images/marked_residual.png" src="../_images/marked_residual.png" style="width: 500px;" /></a>
+<p>We then use the distances downstream that each identified segment starts at as the slope breakpoints parameter (i.e. '800,1500,3400'), and examine the quality of the generated piecewise linear fit.</p>
+<a class="reference internal image-reference" href="../_images/fit_plot.png"><img alt="../_images/fit_plot.png" src="../_images/fit_plot.png" style="width: 500px;" /></a>
+<p>The updated residual plot <strong>does not</strong> include long segments of linearity, which is an indication that appropriate number of slope breakpoints were input.</p>
+<a class="reference internal image-reference" href="../_images/residual_plot.png"><img alt="../_images/residual_plot.png" src="../_images/residual_plot.png" style="width: 500px;" /></a>
+<p>In this case the quality of the fit seems suitable, therefore we could proceed to click the 'Detrend DEM!' button in the GUI.</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>Sudden vertical jumps at the slope breakpoints will negatively effect the quality of your detrended DEM. Large scale residual trends (i.e. all positive residuals on one end of the channel, and all negative on the other) will substantial degrade GCS analysis quality.</p>

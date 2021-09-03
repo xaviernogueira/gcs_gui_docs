@@ -36,7 +36,9 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" /> 
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Background geomorphology" href="fcr_theory.html" />
+    <link rel="prev" title="GCS nesting analysis outputs" href="tab8.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -81,7 +83,7 @@
             
             
               <p class="caption"><span class="caption-text">Processing steps</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="tab1.html">Prepping LiDAR data from processing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tab2.html">Generating a ground-surface DEM from LiDAR data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tab3.html">Generating a thalweg centerline + elevation profile</a></li>
@@ -90,6 +92,13 @@
 <li class="toctree-l1"><a class="reference internal" href="tab6.html">Extracting Geomorphic Covariance Structure (GCS) series</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tab7.html">GCS stage analysis outputs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tab8.html">GCS nesting analysis outputs</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Export to River Builder</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#real-world-topography-to-river-builder">Real world topography to River Builder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gui-inputs">GUI inputs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#outputs">Outputs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a></li>
+</ul>
+</li>
 </ul>
 <p class="caption"><span class="caption-text">Information</span></p>
 <ul>
@@ -228,14 +237,16 @@ width oscillations at multiple scales of <a class="reference internal" href="glo
 </ul>
 </div></blockquote>
 </li>
+<li><p>The units used for the anlaysis (Meters or US Feet).</p></li>
 </ul>
 </div>
 <div class="section" id="outputs">
 <h2>Outputs<a class="headerlink" href="#outputs" title="Permalink to this headline">¶</a></h2>
 <p>A new folder <em>/River_Builder_inputs</em> is created to store the following textfiles.</p>
 <ul class="simple">
-<li><p>Textfiles storing River Builder periodic functions (see example below) that represent the width series for each input flow stage, ex: <em>W_0.4ft_RB.txt</em>.</p></li>
-<li><p>A textfile storing the minimum lateral offset for channel width, <em>XX_offset.txt</em>.</p></li>
+<li><p>Textfiles storing River Builder periodic functions (see example below) that represent the width series for each input flow stage, ex: <em>/W_0.4ft_RB.txt</em>.</p></li>
+<li><p>Textfiles storing the minimum lateral offset of the width function for each flow stage, ex: <em>/W_0.4ft_offset.txt</em>.</p></li>
+<li><p>A textfile storing River Builder periodic functions for the lowest flow stage's detrended elevation (Z) series, ex: <em>/Z_0.2ft_RB.txt</em>.</p></li>
 </ul>
 </div>
 <div class="section" id="examples">
@@ -261,6 +272,15 @@ width oscillations at multiple scales of <a class="reference internal" href="glo
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="fcr_theory.html" class="btn btn-neutral float-right" title="Background geomorphology" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="tab8.html" class="btn btn-neutral float-left" title="GCS nesting analysis outputs" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>

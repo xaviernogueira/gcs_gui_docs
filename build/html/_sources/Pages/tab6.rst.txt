@@ -44,7 +44,31 @@ Extracted cross-sectional values
 Choosing cross-section lengths
 ==============================
 
-SHOW EXAMPLE OF TOO SHORT, TOO LONG, and JUST RIGHT
+The user must define the desired cross-section length for each key flow stage. 
+
+There are two ways for defined cross-section lengths to generate erronous results:
+
+1. The cross-sections are not long enough to extend accross the wetted area of a given flow stage. This results in truncated cross-section width values. 
+
+     * In the example below, 20ft cross-secctions were created for a 0.2ft flow stage. As you can see, some fail to extend across the wetted area.  
+     .. image:: images/to_short.png
+2. The cross-sections are too long relative to the centerline sinuousity, and re-cross the wetted area polygon's perimeter at multiple locations. Or are long enough to intersect discconected topographic lows.
+     
+     * Either cross-section re-crossing or coverage of isolated topographic lows can result in erronous width values.
+     * An example with both issues is below. 500ft cross-sections are shown for a 0.2ft flow stage.
+     .. image:: images/too_long.png
+
+
+.. tip:: Try to find the widest segment of each flow stage wetted area polygon. Use the ruler tool in ArcPro or ArcMap to measure the distance from the centerline to the wetted polygon perimeter at an estimated width maxima. Doubling that distance (and adding to that sum slightly) is a good way to establish a minimum cross-section length for each flow stage.  
+
+Most rivers become less sinuous as flow stage increases. Therefore a cross-secction length long enough to cover the highest key flow 
+stage is likely to cause re-crossing when applied to lower, more sinuous flow stages. For some very straight rivers a single cross-section 
+length may suit all flow stages, but still must be input separately (i.e. '500,500,500,500').
+
+Finally, below we see an example of an appropriately selected cross-section length for the 0.2ft flow stage.
+
+.. image:: images/just_right.png
+     :width: 500
 
 Using a clip polygon (optional)
 ================================
@@ -63,3 +87,9 @@ Here we made the clip polygon (black) that to excludes such errors, resulting in
      :width: 500
 
 Another strategy is altering cross-section lengths, which can work in most settings where the issues are far from the channel.
+
+Applied method flow chart
+==========================
+
+.. image:: images/tab6_flow_chart.png
+     :width: 500

@@ -19,25 +19,25 @@ Slope breakpoint selection example
 ==================================
 We start by plotting a linear fit without breakpoints, and observing the residual plot:
 
-.. image:: images/res1_ex.png
+.. image:: images/residual_plot_no_bp.png
    :width: 500
 
-As you can see, there are segments with considerable linearity at a scale greater 
-than typical in-channel topographic heterogeneity. We mark these segments below.    
+As you can see, there are segments with considerable linearity at a scale greater than typical in-channel topographic heterogeneity. We mark these segments below.    
 
-.. image:: images/res2_ex.png
+.. image:: images/marked_residual.png
    :width: 500
 
-We then enter these slope breakpoints in the specified manner and examine the quality of the piecewise linear fit. 
+We then use the distances downstream that each identified segment starts at as the slope breakpoints parameter (i.e. '800,1500,3400'), and examine the quality of the generated piecewise linear fit. 
 
-.. image:: images/linear_ex.png
+.. image:: images/fit_plot.png
    :width: 500
 
-   .. image:: images/res3_ex.png
+The updated residual plot **does not** include long segments of linearity, which is an indication that appropriate number of slope breakpoints were input.
+
+.. image:: images/residual_plot.png
    :width: 500
 
-In this case the quality of the fit seems suitable, and we have eliminated large scale linearity within the residual plot, therefore we could 
-proceed to click the 'Detrend DEM!' button in the GUI.
+In this case the quality of the fit seems suitable, therefore we could proceed to click the 'Detrend DEM!' button in the GUI.
 
 .. important:: Sudden vertical jumps at the slope breakpoints will negatively effect the quality of your detrended DEM. Large scale residual trends (i.e. all positive residuals on one end of the channel, and all negative on the other) will substantial degrade GCS analysis quality. 
 
@@ -50,7 +50,6 @@ Relevant Outputs
 - A text file recording chosen slope breakpoints and linear regression equations applied between them, *detrending_plots/detrending_fit_eqs.txt*
 - A figure showing the plotted thalweg elevation profile and the piecewise linear regression model, *detrending_plots/fit_plot.png* 
 - A figure showing the linear fit model residual values along the thalweg's longitudinal profile, *detrending_plots/residual_plot.png*
-
 
 
 .. warning:: Wide, flat floodplains can cause erroneous artifacts of the detrending methodology to be observable, especially farther from the thalweg. 

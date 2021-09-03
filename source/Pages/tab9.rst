@@ -53,14 +53,16 @@ GUI inputs
 
     * Refers to the coefficient of correlation between the original signal, and the reconstructed (IFFT) signal w/ N number of FFT frequencies included.
     * A higher R^2 threshold will mean that more frequencies from the original signal FFT are exported, increasing the complexity of the River Builder terrain. 
+- The units used for the anlaysis (Meters or US Feet). 
 
 Outputs
 ===========
 
 A new folder */River_Builder_inputs* is created to store the following textfiles.
 
-- Textfiles storing River Builder periodic functions (see example below) that represent the width series for each input flow stage, ex: *W_0.4ft_RB.txt*. 
-- A textfile storing the minimum lateral offset for channel width, *XX_offset.txt*. 
+- Textfiles storing River Builder periodic functions (see example below) that represent the width series for each input flow stage, ex: */W_0.4ft_RB.txt*. 
+- Textfiles storing the minimum lateral offset of the width function for each flow stage, ex: */W_0.4ft_offset.txt*. 
+- A textfile storing River Builder periodic functions for the lowest flow stage's detrended elevation (Z) series, ex: */Z_0.2ft_RB.txt*.
 
 Examples
 =========
