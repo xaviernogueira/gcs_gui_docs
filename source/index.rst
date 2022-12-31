@@ -12,6 +12,7 @@ You can find the repository `here <https://github.com/xaviernogueira/GCS-Analysi
 
 Included files
 ==============
+
 - Graphic user interface executable script, *gui_tkinter.py*
 - Python files defining GUI implemented function/methods.
 - A copy of pre-requisite executables from RapidLasso's `LAStools <http://lastools.org/>`_.
