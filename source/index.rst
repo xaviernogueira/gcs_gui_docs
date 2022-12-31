@@ -5,48 +5,40 @@
 
 GCS GUI documentation
 +++++++++++++++++++++
-This webpage includes the documentation for the Geomorphic Covariance Structure (GCS) analysis GUI, 
-https://github.com/xaviernogueira/gcs_gui 
+This webpage includes the documentation for the Geomorphic Covariance Structure 
+(GCS) Analysis Tools Graphic User Interface (GUI).
+
+You can find the repository `here <https://github.com/xaviernogueira/GCS-Analysis-Tools>`_.
 
 Included files
 ==============
-- Graphic user interface executable script, *gcs_gui.py*
-- Python files defining GUI implemented function/methods
-- Copy of RapidLasso's LAStools software, http://lastools.org/
-- Copy of 'Breeze' GUI theme, https://github.com/MaxPerl/ttk-Breeze
+- Graphic user interface executable script, *gui_tkinter.py*
+- Python files defining GUI implemented function/methods.
+- A copy of pre-requisite executables from RapidLasso's `LAStools <http://lastools.org/>`_.
+- A copy of the 'Breeze' GUI `theme <https://github.com/MaxPerl/ttk-Breeze>`_.
 
 Pre-requisite packages
 ======================
-- ``arcpy`` 
+- ``arcpy`` with a valid Spatial Analyst license.
 
-.. attention:: ``arcpy`` must be associated with a valid ArcPro license. The GUI must be ran using a `clone of the default ArcPro Python 3 environment <https://pro.arcgis.com/en/pro-app/latest/arcpy/get-started/work-with-python-environments.htm>`_! 
+.. attention:: The GUI must be ran using a `clone of the default ArcPro Python 3 environment <https://pro.arcgis.com/en/pro-app/latest/arcpy/get-started/work-with-python-environments.htm>`_! 
 
-- ``pillow``
-
-  * https://python-pillow.org/
-- ``plotly``
-  
-  * https://plotly.com/
-- ``seaborn``
-
-  * https://seaborn.pydata.org/
-  * - ``plotly``
-
-  * https://plotly.com/python/
-- ``openpyxl``
-
-  * https://openpyxl.readthedocs.io/ 
+- ``scipy``
+- ``pillow`` - https://python-pillow.org/
+- ``plotly`` - https://plotly.com/
+- ``seaborn`` - https://seaborn.pydata.org/
+- ``openpyxl`` - https://openpyxl.readthedocs.io/ 
 
 
 All non- ``arcpy`` packages can be installed to the `cloned ArcPro Python environment <https://pro.arcgis.com/en/pro-app/latest/arcpy/get-started/work-with-python-environments.htm>`_
 by simply using the ArcPro Python Package Manager or via ``conda`` in the command line::
 
-    $ conda activate ...\ESRI\conda\envs\arcgispro-py3-clone\python.exe  
-    $ conda install pillow
-    $ conda install plotly
-    $ conda install seaborn
-    $ conda install plotly
-    $ conda install openpyxl
+    $ conda activate ...\ESRI\conda\envs\arcgispro-py3-clone\python.exe
+    $ conda install -c conda-forge scipy
+    $ conda install -c conda-forge pillow
+    $ conda install -c conda-forge plotly
+    $ conda install -c conda-forge seaborn
+    $ conda install -c conda-forge openpyxl
 
 .. _Setting up:
 Setting up 
@@ -60,8 +52,13 @@ Create a folder containing following:
 
 Bugs and errors
 =================================
-Do not hesitate to contact xavier.rojas.nogueira@gmail.com with bug reports, errors, or other feedback. 
-We will try to respond expeditiously, and update the software when necessary.
+I would appreciate if all bugs and feature requests be made via out GitHub Issues page_.
+.. _page: https://github.com/xaviernogueira/GCS-Analysis-Tools/issues
+
+If you prefer a more direct approach, do not hesitate to contact me via email at 
+xavier.rojas.nogueira@gmail.com with bug reports, questions, or other feedback.
+
+I will try to respond expeditiously, and update the software when necessary.
 
 .. toctree::
    :maxdepth: 2
